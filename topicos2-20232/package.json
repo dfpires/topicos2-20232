@@ -11,9 +11,9 @@
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.8",
-    "react-native-paper": "4.9.2",
+    "expo-constants": "~14.2.1",
     "@expo/vector-icons": "^13.0.0",
-    "expo-constants": "~14.2.1"
+    "react-native-paper": "4.9.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
