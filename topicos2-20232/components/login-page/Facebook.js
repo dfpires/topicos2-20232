@@ -16,22 +16,25 @@ export default function Facebook(){
             secureTextEntry={true}
             placeholder="Senha"
             placeholderTextColor="#cdcdcf"/>
-          <TouchableOpacity> 
-            <Text> Conecte-se </Text>
+          <TouchableOpacity style={styles.button}> 
+            <Text style={styles.buttonText}> Conecte-se </Text>
           </TouchableOpacity>
-          <TouchableOpacity> 
-            <Text> Esqueceu a senha? </Text>
+          <TouchableOpacity style={styles.link}> 
+            <Text style={styles.linkText}> Esqueceu a senha? </Text>
           </TouchableOpacity>
-          <TouchableOpacity> 
-            <Text> Volta </Text> 
+          <TouchableOpacity style={styles.link}> 
+            <Text style={styles.linkText}> Volta </Text> 
           </TouchableOpacity>
         </View>
-        <View>
-          <View>
-            <View> 
-              <Text> OU </Text>
-            </View>
+        <View style={styles.footer}>
+          <View style={styles.divider}>
+            <View style={styles.dividerLine}/> 
+            <Text style={styles.footerText}> OU </Text>
+            <View style={styles.dividerLine}/>
           </View>
+          <TouchableOpacity style={[styles.button, styles.buttonRegister]}>
+            <Text style={[styles.buttonText, styles.buttonRegisterText]}> Criar uma nova conta </Text>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     </>
@@ -66,5 +69,53 @@ const styles = StyleSheet.create({
   password: {
     borderBottomLeftRadius: 3,
     borderBottomRightRadius: 3
+  },
+  button: {
+    height: 42,
+    borderRadius: 6,
+    backgroundColor: "#1977f3",
+    justifyContent: "center",
+    marginVertical: 15
+  },
+  buttonText: {
+    color: "#b4cafb",
+    textAlign: "center",
+    fontSize: 16
+  },
+  link: {
+    paddingVertical: 8
+  },
+  linkText: {
+    color: "#1c6ede",
+    textAlign: "center",
+    fontSize: 16,
+    fontWeight: "500"
+  },
+  footer: {
+    alignItems: "center",
+    padding: 22,
+    paddingBottom: 0
+  },
+  divider: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: "70%",
+    marginBottom: 10
+  },
+  dividerLine: {
+    flex: 1,
+    borderBottomWidth: 1,
+    borderColor: "#cdccd0"
+  },
+  footerText: {
+    width: 50,
+    textAlign: "center"
+  },
+  buttonRegister: {
+    width: "100%",
+    backgroundColor: "#e7f3ff"
+  },
+  buttonRegisterText: {
+    color: "#1077f7"
   }
 })
