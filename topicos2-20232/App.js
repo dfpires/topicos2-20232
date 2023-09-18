@@ -6,8 +6,9 @@ import Login from './components/login-page/Login'
 import Facebook from './components/login-page/Facebook'
 import RegisterForm from './components/register-form/RegisterForm'
 import Instagram from './components/instagram-feed/Instagram'
+import JaQuemPo from './components/jaquempo/JaQuemPo'
 export default function App(){
 
-  return <Instagram/> 
+  return <JaQuemPo/> 
   
 }
