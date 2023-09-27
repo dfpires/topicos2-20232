@@ -7,8 +7,9 @@ import Facebook from './components/login-page/Facebook'
 import RegisterForm from './components/register-form/RegisterForm'
 import Instagram from './components/instagram-feed/Instagram'
 import JaQuemPo from './components/jaquempo/JaQuemPo'
+import WorldNews from './components/news/worldnews'
 export default function App(){
 
-  return <JaQuemPo/> 
+  return <WorldNews/> 
   
 }

@@ -16,7 +16,8 @@
     "expo-constants": "~14.2.1",
     "@expo/vector-icons": "^13.0.0",
     "react-native-paper": "4.9.2",
-    "react-native-keyboard-aware-scroll-view": "0.9.2"
+    "react-native-keyboard-aware-scroll-view": "0.9.2",
+    "moment": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
