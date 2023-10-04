@@ -1,4 +1,4 @@
-import {View, Image, TouchableOpacity, Text, StyleSheet} from 'react-native'
+import {View, Image, TouchableOpacity, Text, StyleSheet, Linking} from 'react-native'
 import moment from 'moment'
 
 export default function Article({item}) {

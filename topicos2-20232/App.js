@@ -8,8 +8,9 @@ import RegisterForm from './components/register-form/RegisterForm'
 import Instagram from './components/instagram-feed/Instagram'
 import JaQuemPo from './components/jaquempo/JaQuemPo'
 import WorldNews from './components/news/worldnews'
+import Imc from './components/imc/imc'
 export default function App(){
 
-  return <WorldNews/> 
+  return <Imc/> 
   
 }
