@@ -1,4 +1,3 @@
-
 import {ViewStyle} from 'react-native'
 
 export const CENTER: ViewStyle = {
@@ -15,6 +14,13 @@ export const TEXT_LABEL: ViewStyle = {
   fontSize: 15,
   textAlign: "center",
   color: "#848694",
+}
+
+export const TEXT_VALUE: ViewStyle = {
+  ...TEXT,
+  fontSize: 35,
+  lineHeight: 55,
+  fontWeight: "bold"
 }
 
 export const ROW: ViewStyle = {

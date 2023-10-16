@@ -3,8 +3,15 @@ import Constants from "expo-constants";
 import {CENTER, TEXT} from './styles'
 import {useState} from 'react'
 import GenderSelection from './GenderSelection'
+import HeightSelection from './HeightSelection'
+import WeightAndAgeSelection from './WeightAndAgeSelection'
+
 export default function Imc(){
   const [gender, setGender] = useState("female")
+  const [height, setHeight] = useState(150)
+  const [weight, setWeight] = useState(50)
+  const [age, setAge] = useState(20)
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light"/>
@@ -16,6 +23,21 @@ export default function Imc(){
           style={styles.gender}
           gender={gender}
           setGender={setGender}/>
+
+        <HeightSelection
+          style={styles.height}
+          height={height}
+          setHeight={setHeight}
+        />
+
+         <WeightAndAgeSelection
+          style={styles.weightAndAge}
+          weight={weight}
+          setWeight={setWeight}
+          age={age}
+          setAge={setAge}
+        />
+
       </View>
     </SafeAreaView>
   )
@@ -40,5 +62,14 @@ const styles = StyleSheet.create({
     ...TEXT,
     fontSize: 24,
     fontWeight: "500"
+  },
+  gender: {
+    flex: 1
+  },
+  height: {
+    flex: 1
+  },
+  weightAndAge: {
+    flex: 1
   }
 })
