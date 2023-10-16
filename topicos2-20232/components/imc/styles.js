@@ -35,3 +35,18 @@ export const BOX: ViewStyle = {
   padding: 15,
   borderRadius: 10,
 };
+
+export const BUTTON: ViewStyle = {
+  ...CENTER,
+  marginHorizontal: 15,
+  height: 60,
+  borderRadius: 5,
+  backgroundColor: "#e83d66",
+}
+
+export const BUTTON_TEXT: TextStyle = {
+  ...TEXT,
+  fontSize: 24,
+  fontWeight: "bold",
+}
+

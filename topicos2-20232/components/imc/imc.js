@@ -1,6 +1,6 @@
-import {SafeAreaView, StatusBar, View, Text, StyleSheet} from 'react-native'
+import {SafeAreaView, StatusBar, View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import Constants from "expo-constants";
-import {CENTER, TEXT} from './styles'
+import {CENTER, TEXT, BUTTON, BUTTON_TEXT} from './styles'
 import {useState} from 'react'
 import GenderSelection from './GenderSelection'
 import HeightSelection from './HeightSelection'
@@ -11,6 +11,10 @@ export default function Imc(){
   const [height, setHeight] = useState(150)
   const [weight, setWeight] = useState(50)
   const [age, setAge] = useState(20)
+
+  function calculate(){
+    
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -38,12 +42,24 @@ export default function Imc(){
           setAge={setAge}
         />
 
+         <TouchableOpacity style={styles.calculateButton} onPress={calculate}>
+          <Text style={styles.calculateButtonText}>CALCULATE</Text>
+        </TouchableOpacity>
+
       </View>
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
+  calculateButton: {
+    ...BUTTON,
+    marginTop: 10,
+    marginBottom: 15,
+  },
+  calculateButtonText: {
+     ...BUTTON_TEXT,
+  },
   container: {
       flex: 1, backgroundColor: "#1d2236",
       paddingTop: Constants.statusBarHeight
@@ -64,10 +80,10 @@ const styles = StyleSheet.create({
     fontWeight: "500"
   },
   gender: {
-    flex: 1
+    flex: 1,
   },
   height: {
-    flex: 1
+    flex: 1,
   },
   weightAndAge: {
     flex: 1

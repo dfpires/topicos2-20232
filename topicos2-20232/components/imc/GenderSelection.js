@@ -14,8 +14,6 @@ export default function GenderSelection({style, gender, setGender}){
           <FontAwesome5 name="mars" size={80} color="#51caef"/>
           <Text style={styles.genderTextSelecion}> MALE </Text> 
         </TouchableOpacity>
-      </View>
-      <View style={styles.genderSelection}>
         <TouchableOpacity style={[
           styles.genderBox, 
           {backgroundColor: gender === "female" ? "#24263b" : "#323344"},]}
@@ -41,6 +39,6 @@ const styles = StyleSheet.create({
       ...CENTER,
       ...BOX,
       margin: 15,
-      marginTop: 0
+      marginTop: 0,
     }
 })
