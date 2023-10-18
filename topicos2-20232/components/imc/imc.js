@@ -5,15 +5,34 @@ import {useState} from 'react'
 import GenderSelection from './GenderSelection'
 import HeightSelection from './HeightSelection'
 import WeightAndAgeSelection from './WeightAndAgeSelection'
+import ResultModal from './ResultModal' 
 
 export default function Imc(){
   const [gender, setGender] = useState("female")
   const [height, setHeight] = useState(150)
   const [weight, setWeight] = useState(50)
   const [age, setAge] = useState(20)
+  const [status, setStatus] = useState("NORMAL")
+  const [interpretation, setInterpretation] = useState("")
+  const [imc, setImc] = useState(0)
+  const [modalVisible, setModalVisible] = useState(false)
 
   function calculate(){
-    
+    const aux = weight / ((height/100) ** 2)
+    if (aux < 18.5){
+      setStatus("ABAIXO DO PESO");
+      setInterpretation("Você está abaixo do peso normal");
+    }
+    else if (aux < 25){
+      setStatus("NORMAL");
+      setInterpretation("Você está no peso ideal");
+    }
+    else {
+      setStatus("ACIMA DO PESO");
+      setInterpretation("Você está acima do peso normal");
+    }
+    setImc(aux.toFixed(2))
+    setModalVisible(true)
   }
 
   return (
@@ -45,6 +64,14 @@ export default function Imc(){
          <TouchableOpacity style={styles.calculateButton} onPress={calculate}>
           <Text style={styles.calculateButtonText}>CALCULATE</Text>
         </TouchableOpacity>
+
+        <ResultModal
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+          imc={imc}
+          status={status}
+          interpretation={interpretation}
+        />
 
       </View>
     </SafeAreaView>
