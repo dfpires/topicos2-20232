@@ -19,3 +19,4 @@ Passo 13: Pode-se gerar também o build da aplicação, que é um executável<br
 go build<br/>
 Passo 14: Perceba que foi gerado o arquivo .exe do programa<br/>
 Passo 15: Entrar no site https://go-tour-br.appspot.com/list e vamos seguir os exemplos para aprender<br/>
+Passo 16: Developing a RESTful API with Go and Gin - https://go.dev/doc/tutorial/web-service-gin </br>
